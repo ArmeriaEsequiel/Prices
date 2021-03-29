@@ -1,0 +1,90 @@
+	{% if user.is_authenticated %}
+		<h1 style=" position: absolute; right:50%">Precios</h1>
+		<div>
+			
+			<a href="{% url 'load_base_view' %}" class="boton" id="Cargar">Cargar</a>
+			
+			<a href="{% url 'modify_product_view' %}" class="boton" id="Modificar">Modificar</a>
+			
+			<style type="text/css">
+			  .boton{
+				text-decoration: none;
+				padding: 100px;
+				padding-left: 220px;
+				padding-right: 220px;
+				font-family: arial;
+				text-transform: uppercase;
+				font-weight: 700;
+				font-size: 25px;
+				color: black;
+ 				background-color: #c1c1c1;
+				border-radius: 15px;
+				border: 3px double #790404;
+			  }
+			  #Cargar #Modificar:hover{
+			    opacity: 0.6;
+			    text-decoration: none;
+			  }
+			  #Cargar{
+			  	position: relative;
+			  	top: 700px;
+			  	right: -250px;
+			  }
+			  #Modificar{
+			  	position: relative;
+			  	top: 700px;
+			  	right: -550px;
+
+			  }
+			</style>
+		</div>
+		<div>
+		<form action="{% url 'price_view' %}" method="get">
+			<input name="search_bar" type="text" placeholder="" id="search_bar">
+			<button type="submit" id="buscar">Buscar</button>
+		</form>
+		<style type="text/css">
+			#search_bar{ 
+				position: relative;
+				top: 200px;
+				right: -500px;
+				width: 800px;
+				height: 100px;
+				font-size: 30px;
+			}
+			#buscar{
+				position: relative;
+				top: 200px;
+				right: -500px;
+				font-size: 50px;
+			}
+		</style>
+		</div>
+	{% else %}
+		<center>	
+		<h1>Tus Precios</h1>
+		<a href="{% url 'home_view' %}" class=".boton"> No estas logueado, inicia sesion </a>
+		</center>
+		<style type="text/css">
+			a{
+				font-size: 50px;
+				right:500px;
+				position: relative;
+				top:200px;
+				left:0%;
+				font: bold 50px Arial;
+				text-decoration: none;
+				background-color: #EEEEEE;
+				color: #333333;
+				padding: 2px 6px 2px 6px;
+				border-top: 1px solid #CCCCCC;
+				border-right: 1px solid #333333;
+				border-bottom: 1px solid #333333;
+				border-left: 1px solid #CCCCCC;
+
+			}
+		</style>
+	{%  endif %}
+	</body>
+
+</html>
