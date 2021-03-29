@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<h1>La modificacion se realizo correctamente</h1>
+
+        {% block content_file_modify %}
+
+        {% endblock %}
+<div>
+<a href="{% url 'search_view' %}" class="back_button">Volver al menu</a>
+<a href="{% url 'modify_product_view' %}" class="reload_button">Modificar mas precios</a>
+</div>
+</center>
+<style type="text/css">
+    .back_button{
+                position: relative;
+                top:500px;
+                left:20%;
+                font: bold 50px Arial;
+                text-decoration: none;
+                background-color: #EEEEEE;
+                color: #333333;
+                padding: 2px 6px 2px 6px;
+                border-top: 1px solid #CCCCCC;
+                border-right: 1px solid #333333;
+                border-bottom: 1px solid #333333;
+                border-left: 1px solid #CCCCCC;
+            }
+
+    .reload_button{
+                position: relative;
+                top:500px;
+                left:30%;
+                font: bold 50px Arial;
+                text-decoration: none;
+                background-color: #EEEEEE;
+                color: #333333;
+                padding: 2px 6px 2px 6px;
+                border-top: 1px solid #CCCCCC;
+                border-right: 1px solid #333333;
+                border-bottom: 1px solid #333333;
+                border-left: 1px solid #CCCCCC
+            }
+
+    h1{
+        position: absolute;
+        left: 650px;
+        top: 70px;
+    }
+</style>

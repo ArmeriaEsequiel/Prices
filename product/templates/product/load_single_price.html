@@ -1,0 +1,49 @@
+<center>
+    	<form action="" method="POST" class = "single">
+			{% csrf_token %}
+    		<h3>Cargar un solo precio</h3>
+        	<br>Nombre producto: <input type="text" required="required" name="name">
+        	<br><br>Precio: <input type="number" name="price" required="required">
+        	<br><br>Descripcion: <input type="text" name="description">
+        	<br><br><input type="submit" name="save_and_exit" value="Guardar y salir">
+        	<br><br><input type="submit" name="keep_saving" value="Guardar y subir otro precio">
+        </form>
+        {% block repeated_price %}
+
+        {% endblock %}
+</center>
+<a href="{% url 'search_view' %}" class="boton">Volver</a>
+
+<style type="text/css">
+    .single{
+            position: absolute;
+            bottom:100px;
+            right:40%;
+            
+        }
+        .button {
+            font: bold 17px Arial;
+            text-decoration: none;
+            background-color: #EEEEEE;
+            color: #333333;
+            padding: 2px 6px 2px 6px;
+            border-top: 1px solid #CCCCCC;
+            border-right: 1px solid #333333;
+            border-bottom: 1px solid #333333;
+            border-left: 1px solid #CCCCCC;
+        }
+        .boton{
+            position: absolute;
+            bottom:15px;
+            left:5%;
+            font: bold 50px Arial;
+            text-decoration: none;
+            background-color: #EEEEEE;
+            color: #333333;
+            padding: 2px 6px 2px 6px;
+            border-top: 1px solid #CCCCCC;
+            border-right: 1px solid #333333;
+            border-bottom: 1px solid #333333;
+            border-left: 1px solid #CCCCCC;
+        }
+</style>

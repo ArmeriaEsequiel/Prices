@@ -1,0 +1,26 @@
+<form action="" class = 'search_bar'>
+	<div>Buscar precio para modificar</div>
+	<input name="search_bar" type="text" placeholder="" id="search_bar">
+	<button formaction = "{% url 'update_single_price' %}" type="submit" name="single" id="search" >Buscar y modificar</button>
+	<button formaction = "{% url 'delete_single_price'%}" type="submit" name="single" id="search" >Buscar y eliminar</button>
+</form>
+<style type="text/css">
+	.search_bar{ 
+		position: relative;
+		top: 500px;
+		right: -600px;
+		width: 800px;
+		height: 100px;
+		font-size: 30px;
+	}
+	#search_bar{ 
+		position: relative;
+		width: 800px;
+		height: 100px;
+		font-size: 30px;
+	}
+	#search{
+		right: -500px;
+		font-size: 45px;
+	}
+</style>

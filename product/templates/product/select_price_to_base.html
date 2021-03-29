@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+</head>
+<body>
+<center>
+<form method='POST'>
+{% csrf_token %}
+<h2>Detalles de los productos</h2>
+    {% for product in product_list %}
+        <tr>
+            <td><div>{{ product.name }}</div></td>
+            {% block price_list_blockm %}
+            {% endblock %}
+
+            {% block price_list_blockd %}
+            {% endblock %}
+
+            
+            </br></br>
+        </tr>
+    {% endfor %}
+    <input type="submit" method = 'POST' name="next" value="Siguiente">
+</form>
+</center>
+
+    <a href="{% url 'modify_product_view' %}" class = "button">Volver</a>
+
+<style type="text/css">
+    input:link {color: #ff0000; font-size: 20px;}
+    input:visited{color: #ff0000;}
+    input:hover {background: #66ff66;}
+    div{font-size:40px;
+        padding: 10px 20px;
+    }
+    .check{
+        transform:scale(2);
+    }
+    .button{
+        font: bold 50px Arial;
+        text-decoration: none;
+        background-color: #EEEEEE;
+        color: #333333;
+        padding: 2px 6px 2px 6px;
+        border-top: 1px solid #CCCCCC;
+        border-right: 1px solid #333333;
+        border-bottom: 1px solid #333333;
+        border-left: 1px solid #CCCCCC;
+    }
+    #next{font-size: 47px;}
+</style>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title> Precios </title>
+	</head>
+	<body>
+		{% block content_price %}
+
+		{% endblock %}
+
+		<div>
+			
+			<a href="{% url 'load_base_view' %}" class="boton" id="Load">Cargar</a>
+			
+			<a href="{% url 'search_view' %}" class="boton" id="Search">Buscar otro precio</a>
+
+			<a href="{% url 'modify_product_view' %}" class="boton" id="Modify">Modificar</a>
+			
+			<style type="text/css">
+			  .boton{
+				text-decoration: none;
+				padding: 100px;
+				padding-left: 100px;
+				padding-right: 100px;
+				font-family: arial;
+				text-transform: uppercase;
+				font-weight: 700;
+				font-size: 25px;
+				color: black;
+ 				background-color: #c1c1c1;
+				border-radius: 15px;
+				border: 3px double #790404;
+			  }
+			  #Load #Modify #Search:hover{
+			    opacity: 0.6;
+			    text-decoration: none;
+			  }
+			  #Load{
+			  	position: relative;
+			  	top: 300px;
+			  	right: -100px;
+			  }
+			  #Modify{
+			  	position: relative;
+			  	top: 300px;
+			  	right: -600px;
+
+			  }
+			  #Search{
+			  	position: relative;
+			  	top: 300px;
+			  	right: -380px;
+			  }
+			</style>
+		</div>
+	</body>
+</html>

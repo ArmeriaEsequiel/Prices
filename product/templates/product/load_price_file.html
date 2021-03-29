@@ -1,0 +1,71 @@
+<center>
+	<h1>Ingrese un archivo con extencion .XLS</h1>
+</center>
+<form action="" enctype="multipart/form-data" method="POST" class="files">
+	{% csrf_token %}
+	{{ form }}
+	<input type="file" id= 'file' name="file">
+	<p></p>
+	<button type="submit" name= "xls" value="Subir">Subir</button>
+</form>
+<a href="{% url 'search_view' %}" class="boton">Volver</a>
+<style type="text/css">
+		.files{
+			position: absolute;
+			top: 20%;
+			left: 50%;
+			margin-top: -100px;
+			margin-left: -250px;
+			width: 500px;
+			height: 200px;
+			border: 4px dashed #000000;
+		}
+		.files p{
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			line-height: 170px;
+			color: #000000;
+			font-family: Arial;
+		}
+		.files input{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+		.files button{
+			margin: 0;
+			color: #fff;
+			background: #16a085;
+			border: none;
+			width: 508px;
+			height: 35px;
+			margin-top: -20px;
+			margin-left: -4px;
+			border-radius: 4px;
+			border-bottom: 4px solid #117A60;
+			transition: all .2s ease;
+			outline: none;
+		}
+		.files button:hover{
+			background: #149174;
+			color: #0C5645;
+		}
+		.files button:active{
+			border:0;
+		}
+	.boton{
+            position: absolute;
+            bottom:15px;
+            left:5%;
+            font: bold 50px Arial;
+            text-decoration: none;
+            background-color: #EEEEEE;
+            color: #333333;
+            padding: 2px 6px 2px 6px;
+            border-top: 1px solid #CCCCCC;
+            border-right: 1px solid #333333;
+            border-bottom: 1px solid #333333;
+            border-left: 1px solid #CCCCCC;
+        }
+</style>

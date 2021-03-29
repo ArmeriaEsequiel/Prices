@@ -1,0 +1,20 @@
+{% extends 'product/successful_single_price_modify.html' %}
+{% block content_file_modify %}
+<body>
+	<center>
+		<div class = 'names'>
+			<div> No se encontraron los siguientes precios</div>
+			{% for name in name_list %}
+				<li>{{name}}</li>
+			{% endfor %}
+		</div>
+	</center>
+	<style type="text/css">
+		.names{
+			position: relative;
+			top:300px;
+			font-size: 25px;
+		}
+	</style>
+</body>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'product/product_base.html' %}
+{% block content_price %}
+
+<head>
+	<style>
+		#price_list tr td:nth-child(2) {
+   			text-align: right;
+		}
+
+		#price_list {
+			font-family: Arial;
+			border-collapse: collapse;
+			width: 100%;
+			}
+
+		#price_list td {
+			border: 3px solid #c1c1c1;
+			border-width:5px;
+			padding: 10px;
+			font-size: 30px;
+		}
+		#price_list th {
+			border: 3px solid #c1c1c1;
+			border-width:5px;
+			padding: 10px;
+			font-size: 30px;
+
+		}
+	</style>
+</head>
+<body>
+	<table id="price_list"> 
+		<tr>
+			<th>Producto</th>
+			<th>Precio</th>	
+		</tr>	
+		{% for product in product_list %}
+			<tr>
+				<td>{{product.name}} {{product.description}} </td>
+				<td> {{product.price}} </td>
+		{% endfor %}	
+		</tr>
+	</table>
+
+</body>
+{% endblock %}

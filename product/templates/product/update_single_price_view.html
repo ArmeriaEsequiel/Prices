@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<center>
+<u class='size'>Nombre del producto:</u>
+</br></br>
+<div class='name'>{{product.name}}</div>
+</br></br>
+</br></br>
+</br></br>
+<u class='size'> El precio a modificar es: </u> 
+</br></br>
+<div class='number'>{{product.price}}</div>
+</br></br>
+</br></br>
+</br></br>
+</br></br>
+<u class='size'>Ingrese el nuevo precio</u>
+</br></br>
+</br></br>
+</br></br>
+<form action="" method="POST" name="update">
+    {% csrf_token %}
+    <input type="text" class="textbox" name="new_price">
+    <input type="submit" formaction = "{% url 'update' count %}" class="searchbutton" value="Guardar">
+</form>
+</br></br>
+<a href="{% url 'modify_product_view' %}" class="boton">Volver</a>
+</center>
+
+<style type="text/css">
+	input[type="text"]{
+		font-size: 50px;
+		text-align: center;
+	}
+	.size{font-size:40px}
+	.name{
+		font-size: 50px;
+		background-color: #df0303;
+		width: 50%;
+	}
+	.searchbutton{font-size: 30px}
+	.number{
+		font-size: 50px;
+		background-color: #df0303;
+		width: 50%;
+	}
+	.textbox { width: 300px; height: 150px; border: 1px solid #999999; padding: 5px; }
+
+	.boton{
+	    position: absolute;
+	    bottom:15px;
+	    left:5%;
+	    font: bold 50px Arial;
+	    text-decoration: none;
+	    background-color: #EEEEEE;
+	    color: #333333;
+	    padding: 2px 6px 2px 6px;
+	    border-top: 1px solid #CCCCCC;
+	    border-right: 1px solid #333333;
+	    border-bottom: 1px solid #333333;
+	    border-left: 1px solid #CCCCCC;
+	}
+</style>
+
+
+
+</body>
+</html>
